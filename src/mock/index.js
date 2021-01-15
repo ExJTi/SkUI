@@ -9,7 +9,7 @@ import loginAPI from './login';
 // import home from './mockModules/home'
 
 // 登录相关
-Mock.mock('https://localhost:9527/rcdc/rco/admin/loginAdmin', 'post', loginAPI.loginByUsername)
+Mock.mock(/\/rcdc\/rco\/admin\/loginAdmin/, 'post', loginAPI.loginByUsername)
 Mock.mock(/\/rcdc\/base\/admin\/logoutAdmin/, 'post', loginAPI.logout)
 Mock.mock(/\/rcdc\/base\/admin\/validateAdminPwd/, 'post', loginAPI.validateAdminPwd)
 Mock.mock(/\/rcdc\/base\/admin\/getCurrentUserInfo/, 'post', loginAPI.getUserInfo)
