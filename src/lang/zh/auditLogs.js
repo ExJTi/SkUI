@@ -1,0 +1,21 @@
+export default {
+  operateLogs: '操作日志',
+  systemLogs: '系统日志',
+  cloudDesktopOpLog: '云桌面日志',
+  cloudDesktopOpLogSearch: '云桌面名称/操作源IP/操作内容',
+  logsBackup: '日志备份',
+  backupConfiguration: '备份配置',
+  opratePlaceholder: '管理员账号/操作内容',
+  systemPlaceholder: '操作内容',
+  adminAccount: '管理员账号',
+  operateTime: '操作时间',
+  loginIp: '登录IP地址',
+  operate: '操作内容',
+  fileName: '备份文件名',
+  backupTime: '备份时间',
+  config: '配置',
+  isBackup: '是否开启备份日志',
+  backupInterval: '备份间隔时间(月)',
+  isCleanUp: '是否开启定时清理',
+  saveMinTime: '备份文件保存时间(月)'
+}

@@ -1,0 +1,135 @@
+@import "~sky-engine/assets/styles/mixin/mixin";
+@import "~sky-engine/assets/styles/common/var.scss";
+
+$--content-center-width: 430px;
+$--content-center-height: 500px;
+
+@include b(login) {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url("./css_images/login/background.png");
+  background-size: 100% 100%;
+
+  @include e(main) {
+    width: 100%;
+  }
+
+  @include e(form) {
+    float: right;
+    text-align: center;
+    padding: 40px 35px;
+    margin-right: 135px;
+    width: $--content-center-width;
+    height: $--content-center-height;
+    background: $--color-text-primary-in-dark;
+    border-radius: $--border-radius-big * 2;
+    box-shadow: 0px 12px 28px 0px $--color-text-disabled;
+  }
+
+  @include e(form-header) {
+    color: $--color-primary;
+    margin-top: $--margin-size-base;
+    margin-bottom: 72px;
+
+    .sk-icon-logo {
+      font-size: 60px;
+    }
+  }
+
+  @include e(header) {
+    position: fixed;
+    height: 56px;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  @include e(bottom) {
+    position: fixed;
+    height: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $--color-text-secondary;
+
+    & .sky-progress-box {
+      display: none;
+
+      & .sky-progress-box__toggle {
+        display: none;
+      }
+    }
+    & .sky-progress-box.is-open {
+      display: block;
+    }
+  }
+
+  @include e(about) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  @include e(about-left) {
+    margin-left: $--margin-size-middle;
+  }
+
+  @include e(about-right) {
+    margin-right: $--margin-size-middle;
+  }
+
+  @include e(about-txt) {
+    color: $--color-text-primary-in-dark;
+    margin: 0 $--margin-size-base;
+    font-size: $--font-size-base;
+  }
+  @include e(about-wechat) {
+    width: 100%;
+    height: 100%;
+  }
+
+  & .el-form {
+    & .el-form-item {
+      margin-bottom: $--margin-size-middle;
+      & .el-input__inner {
+        background: #e4f2fb;
+        border: none;
+        height: 60px;
+        padding-left: 60px;
+        color: $--color-text-regular;
+        font-size: $--font-size-middle;
+      }
+
+      // & .el-form-item__error{
+      //   left: 60px;
+      // }
+
+      & .el-input__prefix {
+        top: 4px;
+
+        & .el-input__icon {
+          width: 100%;
+          font-size: $--font-size-xx-large;
+          color: $--color-primary;
+        }
+      }
+    }
+
+    & .el-button {
+      width: 100%;
+      height: 50px;
+      color: $--color-text-primary-in-dark;
+      font-size: $--font-size-middle;
+      border-radius: $--border-radius-big;
+      margin-top: $--margin-size-big * 2;
+    }
+  }
+
+  // 抵消在chrome下表单自动填入时的黄色背景，延迟360000s后执行。
+  input:-webkit-autofill {
+    transition: background-color 360000s ease-in-out 360000s;
+  }
+}

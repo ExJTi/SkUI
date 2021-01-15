@@ -1,0 +1,14 @@
+@import '~sky-engine/assets/styles/common/transition.scss';
+@import './components/index.scss';
+@import './global.scss';
+
+.sk-app.is-hideSidebar .sk-navbar__logoicon{
+  background: url("./css_images/logo/logo-close.svg") no-repeat !important;
+  margin-left: $--margin-size-smaller !important;
+  height: 25px;
+}
+.sk-app .sk-navbar__logoicon{
+  background: url("./css_images/logo/logo-open.svg") no-repeat;
+  margin: 0 $--margin-size-smaller;
+  background-size: 100% 100%;
+}

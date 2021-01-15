@@ -1,0 +1,54 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+        }
+      }
+    ],
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-vue-jsx",
+    "lodash",
+    [
+      "sk-ui",
+      {
+        "libraryName": "sk-ui",
+        "styleLibrary": {
+          "name": "theme-chalk",
+          "base": true
+        }
+      },
+      "sk-ui"
+    ],
+    [
+      "element-ui",
+      {
+        "libraryName": "element-ui",
+        "styleLibrary": {
+          "name": "theme-chalk",
+          "base": true
+        }
+      
+      },
+      "element-ui"
+    ],
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ],
+    ["module-resolver", {
+      "alias": {
+      }
+    }]
+  ]
+}
